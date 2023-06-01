@@ -1,0 +1,14 @@
+:root {
+  --color-black: #000;
+  --color-text: #e7e9ea;
+  --color-hover: rgba(239, 243, 244, 0.1);
+  --color-brand: rgb(29, 155, 240);
+  --color-brand-hover: rgba(29, 156, 240, 0.2);
+  --color-sidebar: #16181c;
+  --color-sidebar-text: #747475;
+  --color-reactions: #747475;
+  --color-retweet: #00ba7c;
+  --color-retweet-hover: #00ba7c31;
+  --color-like: #f91880;
+  --color-like-hover: #f9188139;
+}

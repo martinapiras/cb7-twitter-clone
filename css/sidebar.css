@@ -1,0 +1,250 @@
+@import "./header.css";
+
+aside {
+  width: 40%;
+  max-height: 100vh;
+  overflow-y: auto;
+}
+
+.sidebar {
+  position: sticky;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: safe center;
+  align-items: safe center;
+  gap: 15px;
+  padding: 10px;
+}
+
+.searchWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.searchWrapper img {
+  height: 18px;
+  width: auto;
+  position: absolute;
+  left: 28px;
+  filter: invert(98%) sepia(44%) saturate(87%) hue-rotate(170deg)
+    brightness(96%) contrast(91%) opacity(50%);
+}
+
+.searchbar {
+  width: 90%;
+  padding: 11px 30px;
+  border-radius: 30px;
+  background-color: var(--color-sidebar);
+  color: var(--color-sidebar-text);
+  border: 0;
+  font-weight: 300;
+  font-size: 0.9rem;
+}
+
+.searchbar:focus {
+  outline: 1px solid var(--color-brand);
+  box-shadow: none;
+  background-color: var(--color-black);
+}
+
+.trending {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-sidebar);
+  border-radius: 15px;
+  width: 90%;
+}
+
+.trending__title,
+.trending__more {
+  padding: 20px;
+}
+
+.trending__more:hover {
+  background-color: var(--color-hover);
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+.trending__items {
+  display: flex;
+  flex-direction: column;
+}
+
+.trending__item {
+  padding: 10px 20px;
+  display: flex;
+  width: 100%;
+  transition: all 0.35s;
+  cursor: pointer;
+}
+
+.trending-category,
+.trending-number {
+  font-size: 0.85rem;
+}
+
+.trending__item:hover {
+  background-color: var(--color-hover);
+}
+
+.trending__item-content {
+  width: 94%;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.trending__item-content p {
+  color: var(--color-sidebar-text);
+}
+
+.trending-hashtag {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.trending__item-action {
+  width: 6%;
+}
+
+.trending__item-action svg {
+  width: calc(100% + 10px);
+  padding: 5px;
+  border-radius: 50%;
+  height: auto;
+  fill: var(--color-sidebar-text);
+  transition: all 0.35s;
+}
+
+.trending__item-action svg:hover {
+  background-color: var(--color-brand-hover);
+  fill: var(--color-brand);
+}
+
+.trending__more:link,
+.trending__more:visited,
+.followSuggestions__more:link,
+.followSuggestions__more:visited {
+  color: var(--color-brand);
+}
+
+.followSuggestions {
+  background-color: var(--color-sidebar);
+  padding-top: 10px;
+  border-radius: 15px;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+}
+
+.followSuggestions__title {
+  padding: 10px 20px;
+}
+
+.followSuggestions__more {
+  padding: 20px;
+}
+
+.followSuggestions__more:hover {
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  background-color: var(--color-hover);
+}
+
+.followSuggestions .userSection {
+  width: 100%;
+  border-radius: 0;
+}
+
+.followSuggestions .userSection__content {
+  width: 80%;
+}
+
+.followSuggestions .userSection__actions {
+  width: 20%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.followSuggestions .userData-nickname {
+  color: var(--color-sidebar-text);
+}
+
+.followSuggestions .userData-screenName:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+}
+
+.followButton {
+  background-color: var(--color-text);
+  color: var(--color-black);
+  padding: 6px 15px;
+  border-radius: 15px;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.footer,
+.footer a:link,
+.footer a:visited {
+  color: var(--color-sidebar-text);
+}
+
+.footer {
+  width: 90%;
+}
+
+.footerLinks {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.footerLink {
+  width: 45%;
+  font-size: 0.8rem;
+}
+
+.footerLink:hover {
+  text-decoration: underline;
+}
+
+.footer__more {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 5px;
+}
+
+.footer__more-actions {
+  width: 10%;
+  height: auto;
+}
+
+.footer__more-actions svg {
+  width: 100%;
+  height: auto;
+  fill: var(--color-sidebar-text);
+}
+
+.footer__copyright {
+  width: 100%;
+  display: block;
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+/* tablet */
+@media screen and (max-width: 1024px) {
+  .mobile-hidden {
+    display: none;
+  }
+}

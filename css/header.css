@@ -1,0 +1,224 @@
+.header {
+  position: sticky;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: safe center;
+  align-items: flex-start;
+  padding: 10px 10px 10px 20%;
+  gap: 15px;
+}
+
+a:visited,
+a:link {
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+.logoContainer {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.35s;
+}
+
+.logoContainer:hover,
+.navLink:hover {
+  background-color: var(--color-hover);
+  cursor: pointer;
+}
+
+.logoContainer svg {
+  width: 30px;
+  height: auto;
+}
+
+.navLinks {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.navLink {
+  display: flex;
+  align-items: center;
+  margin-right: 5px;
+  gap: 20px;
+  font-size: 20px;
+  width: fit-content;
+  border-radius: 20px;
+  padding: 5px 10px;
+  transition: all 0.35s;
+}
+
+.navLink__icon {
+  width: 27px;
+  height: 27px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  position: relative;
+}
+
+.navLink__icon svg {
+  width: 24px;
+  height: auto;
+}
+
+.navLink__label {
+  text-decoration: none;
+}
+
+.navLink.active .navLink__label {
+  font-weight: bold;
+}
+
+.navLink.newPostsNotif .navLink__icon::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: var(--color-brand);
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+}
+
+.tweetButton {
+  display: flex;
+  text-align: center;
+  width: 80%;
+  background-color: var(--color-brand);
+  padding: 15px 30px;
+  border-radius: 26px;
+  cursor: pointer;
+}
+
+.tweetButton__label {
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+}
+
+.tweetButton__icon {
+  display: none;
+}
+
+.tweetButton__icon svg {
+  display: none;
+  width: 24px;
+  height: 24px;
+}
+
+.userSection {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 50px;
+  transition: all 0.35s;
+}
+
+.userSection:hover {
+  background-color: var(--color-hover);
+}
+
+.userSection__content {
+  width: 90%;
+  display: flex;
+  gap: 15px;
+}
+
+.userSection__profilePic,
+.userSection__profilePic img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.userData-screenName {
+  font-weight: bold;
+}
+
+.userSection__actions {
+  width: 10%;
+  height: fit-content;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.userSection__actions svg {
+  width: 20px;
+  height: fit-content;
+}
+
+/* tablet */
+@media screen and (max-width: 1023px) {
+  .mobile-hidden {
+    display: none;
+  }
+
+  .header {
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .logoContainer:active,
+  .navLink:active {
+    background-color: var(--color-hover);
+  }
+
+  .tweetButton {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .tweetButton__icon {
+    display: block;
+    padding: 50%;
+    width: inherit;
+    height: inherit;
+  }
+
+  .tweetButton__icon svg {
+    height: 20px;
+    width: auto;
+    display: inline;
+    position: relative;
+    transform: translate(-50%, -50%);
+  }
+
+  .userSection__content {
+    width: 100%;
+    gap: 0;
+  }
+
+  .userSection__profilePic {
+    width: 35px;
+    height: 35px;
+  }
+
+  .userSection__profilePic img {
+    width: 35px;
+    height: 35px;
+  }
+
+  .userSection:hover {
+    background-color: transparent;
+  }
+}

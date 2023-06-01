@@ -1,0 +1,34 @@
+.mainContainer {
+  display: flex;
+}
+
+header {
+  width: 23%;
+  max-height: 100vh;
+  overflow-y: auto;
+}
+
+.mainContent {
+  width: 77%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.dashboard {
+  width: 60%;
+}
+
+/* tablet */
+@media screen and (max-width: 1024px) {
+  header {
+    width: 10%;
+  }
+
+  .mainContent {
+    width: 90%;
+  }
+
+  .dashboard {
+    width: 100%;
+  }
+}
